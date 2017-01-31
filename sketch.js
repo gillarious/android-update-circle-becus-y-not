@@ -21,8 +21,6 @@ function Circle(canvas, r, g, b){
 	var speedY;
 
 	this.canvas = canvas;
-	this.x = x;
-	this.y = y;
 	size = 100;
 
 	Circle.prototype.display = function() {
