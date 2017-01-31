@@ -6,14 +6,17 @@ function setup() {
 
 function draw() {
 	background(0,0,0);
-	
+
+	var white_circle;
+	white_circle = new Circle(0,0,0);
+	white_circle.display;
 }
 
-function Circle(canvas, color){
+function Circle(canvas, r, g, b){
 	var size;
-	var myRed;
-	var myGreen;
-	var myBlue;
+	var r;
+	var g;
+	var b;
 	var myAlpha;
 	var speedX;
 	var speedY;
@@ -21,7 +24,7 @@ function Circle(canvas, color){
 	this.canvas = canvas;
 	this.x = x;
 	this.y = y;
-	size = this.canvas.random(15, 35);
+	size = 100;
 
 	Circle.prototype.move = function() {
 		x += speedX;
@@ -47,7 +50,7 @@ function Circle(canvas, color){
 
 	Circle.prototype.display = function() {
 		this.canvas.noStroke();
-		this.canvas.fill(myRed, myGreen, myBlue, myAlpha);
-		this.canvas.ellipse(x, y, size, size);
+		this.canvas.fill(r, g, b);
+		this.canvas.ellipse(50, 50, size, size);
 	}
 }
