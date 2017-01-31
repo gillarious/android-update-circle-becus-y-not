@@ -7,8 +7,7 @@ function setup() {
 function draw() {
 	background(0,0,0);
 
-	var white_circle;
-	white_circle = new Circle(0,0,0);
+	var white_circle = new Circle(100,100,100);
 	white_circle.display;
 }
 
@@ -25,28 +24,6 @@ function Circle(canvas, r, g, b){
 	this.x = x;
 	this.y = y;
 	size = 100;
-
-	Circle.prototype.move = function() {
-		x += speedX;
-		y += speedY;
-
-	  	if (x > width) {
-			x = width;
-			speedX *= -1;
-	    }
-		if (y > height) {
-			y = height;
-			speedY *= -1;
-		}
-		if (x < 0) {
-			x =0;
-			speedX *= -1;
-		}
-		if (y < 0) {
-			y = 0;
-			speedY *= -1;
-		}
-	}
 
 	Circle.prototype.display = function() {
 		this.canvas.noStroke();
