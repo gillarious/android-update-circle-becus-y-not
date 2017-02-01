@@ -6,9 +6,8 @@ function setup() {
 
 function draw() {
 	background(0,0,0);
-
-	var white_circle = new Circle(100,100,100);
-	white_circle.display;
+	ellispse(100,100,100,100);
+	fill(100,100,100);
 }
 
 function Circle(canvas, r, g, b){
